@@ -31,32 +31,11 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
 ## Documentação 
 
 - [Arquitetura](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
-    - [Diagramação](https://github.com/Juniorbasck/astro4noobs/tree/main/content/intro/instalacao.md)
+    - [Diagramação]()
     - [API REST](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
 - [Documentação Jornadas](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
-    - [Login](https://github.com/Juniorbasck/astro4noobs/tree/main/content/intro/instalacao.md)
-    - [Cadastro](https://github.com/Juniorbasck/astro4noobs/tree/main/content/intro/instalacao.md)
-
- 
-<!--  - [Hello World!](https://github.com/Juniorbasck/astro4noobs/tree/main/content/intro/helloworld.md)
-- [Conceitos](https://github.com/lanjoni/clojure4noobs/tree/main/content/conceitos)
-  - [Estruturas de Dados](https://github.com/lanjoni/clojure4noobs/tree/main/content/conceitos/estruturas.md)
-  - [Vetores](https://github.com/lanjoni/clojure4noobs/tree/main/content/conceitos/vetores.md)
-- [Projeto](https://github.com/lanjoni/clojure4noobs/tree/main/content/conceitos)](url) -->
-<!-- CONTRIBUTING -->
-
-
-<!-- ## Como Contribuir
-
-Contribuições fazem com que a comunidade open source seja um lugar incrível para aprender, inspirar e criar. Todas contribuições
-são **extremamente apreciadas**
-
-1. Realize um Fork do projeto
-2. Crie um branch com a nova feature (`git checkout -b feature/featureDaora`)
-3. Realize o Commit (`git commit -m 'Adicionado conteudo daora'`)
-4. Realize o Push no Branch (`git push origin feature/featureDaora`)
-5. Abra um Pull Request](url)
--->
+    - [Login](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
+    - [Cadastro]()
 
 
 ## Fontes de conteúdo
