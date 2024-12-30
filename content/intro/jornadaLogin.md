@@ -1,9 +1,5 @@
 # Documentação do Endpoint de Login
 
-Esta documentação explica como utilizar o endpoint de login para verificar usuários na base de dados utilizando o Supabase. O endpoint realiza a busca por email e senha para autenticar um usuário.
-
----
-
 ## Informações Básicas
 
 - **Base URL:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/users`
