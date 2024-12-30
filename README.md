@@ -31,8 +31,12 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
 ## Documentação 
 
 - [Arquitetura](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
-  - [API REST](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
-  - [Diagramação](https://github.com/Juniorbasck/astro4noobs/tree/main/content/intro/instalacao.md)
+    - [Diagramação](https://github.com/Juniorbasck/astro4noobs/tree/main/content/intro/instalacao.md)
+    - [API REST](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
+- [Documentação Jornadas](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
+    - [Login](https://github.com/Juniorbasck/astro4noobs/tree/main/content/intro/instalacao.md)
+    - [Cadastro](https://github.com/Juniorbasck/astro4noobs/tree/main/content/intro/instalacao.md)
+
  
 <!--  - [Hello World!](https://github.com/Juniorbasck/astro4noobs/tree/main/content/intro/helloworld.md)
 - [Conceitos](https://github.com/lanjoni/clojure4noobs/tree/main/content/conceitos)
