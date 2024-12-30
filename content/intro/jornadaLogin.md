@@ -26,4 +26,5 @@ Os headers necessários para realizar a requisição são:
 ```json
 {
   "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh3YmR2YXFnZ2NkZmdzcW54aWNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQzNjEwNTksImV4
-
+}
+```
