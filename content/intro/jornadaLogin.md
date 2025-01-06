@@ -76,6 +76,7 @@ https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/users
   "Content-Type": "application/json"
 }
 ```
+## Atenção: Na tabela User no supabse o ID dela deve ser o mesmo retornado na hora criação do usuario, exemplo "f9faf665-441f-4b8a-bacd-644cc64770fa","
 
 #### **Body:**
 ```json
