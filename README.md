@@ -18,7 +18,7 @@
     
  <!-- ABOUT THE PROJECT -->
 
-## Sobre o Projeto
+## Sobre a empresa
 Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltada para a criação, gerenciamento e disponibilização de agentes de IA inteligentes. Este repositório contém todas as informações necessárias para entender e configurar o projeto, além de oferecer insights sobre a arquitetura, ferramentas utilizadas e muito mais.
 
 <!-- ROADMAP OF PROJECT -->
