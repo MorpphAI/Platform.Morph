@@ -32,15 +32,15 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
    
 ## Documentação 
 
-- [Arquitetura](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
+- [Arquitetura](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/Arquitetura.md)
     - [Sobre API REST](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
     - [Como utlizamos o Supabase?](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
     - [Como utlizamos a API da OpenIA?](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
-- [Documentação Jornadas](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
+- [Documentação Jornadas](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/DocsJornadas.md)
     - [Login](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
     - [Criação de vaga](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
     - [Criação de persona](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
-- [Supabase](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
+- [Supabase](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/Supabase.md)
     - [Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
 
 
