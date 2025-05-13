@@ -26,7 +26,8 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
 
 1. bubble - ferramente No Code 
 2. Supabase - Banco de dads 
-3. Figma - Design 
+3. Figma - Design
+4. Dados - Looker Studio
    
 ## Documentação 
 
