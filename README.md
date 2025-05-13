@@ -1,5 +1,5 @@
 <p align="center">
-  <img align="center" src="https://github.com/MorpphAI/platform.Morph/blob/main/content/images/morphTrans.png" alt="Imagem da linguagem" width="60">
+  <img align="center" src="https://github.com/MorpphAI/platform.Morph/blob/main/content/images/morphTrans.png" alt="Imagem da linguagem" width="100">
   <h1 align="center">Morph IA</h1>
   
   <!-- ![Texto Alternativo](content/images/morph.jpeg) --> 
