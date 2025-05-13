@@ -10,10 +10,6 @@ Na próxima seção estarão listados todos os endpoints que estamos utilizando 
 
 ---
 
-<p align="right">
-  <a href="https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/introRestOpenIA.md">Próximo -> EndPoints que estamos Utilizando</a>
-</p>
-
 <p align="left">
   <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/README.md">Voltar para o menu principal</a>
 </p>
