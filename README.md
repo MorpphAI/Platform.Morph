@@ -1,4 +1,5 @@
 <p align="center">
+  <img align="center" src="https://github.com/MorpphAI/platform.Morph/blob/main/content/images/morphTrans.png" alt="Imagem da linguagem" width="60">
   <h1 align="center">Morph IA</h1>
   
   <!-- ![Texto Alternativo](content/images/morph.jpeg) --> 
@@ -25,17 +26,21 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
 ## Ferramentas utilizadas
 
 1. bubble - ferramente No Code 
-2. Supabase - Banco de dads 
+2. Supabase - Banco de dados
 3. Figma - Design 
    
 ## Documentação 
 
 - [Arquitetura](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
-    - [Diagramação]()
-    - [API REST](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
+    - [Sobre API REST](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
+    - [Como utlizamos o Supabase?](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
+    - [Como utlizamos a API da OpenIA?](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
 - [Documentação Jornadas](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
     - [Login](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
-    - [Cadastro]()
+    - [Criação de vaga](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
+    - [Criação de persona](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
+- [Supabase](https://github.com/Juniorbasck/astro4noobs/tree/main/content/rest.md)
+    - [Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
 
 
 ## Fontes de conteúdo
