@@ -613,3 +613,5 @@ Se o `job_id` não possuir uma descrição cadastrada, a função retorna um err
 Além disso, um **log de atividade** é registrado na tabela `activity_logs`, detalhando a alteração feita.
 
 ---
+
+🔙 [Voltar para o índice de endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/functions.md)
