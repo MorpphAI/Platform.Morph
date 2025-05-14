@@ -377,3 +377,45 @@ Os resultados são ordenados da mais recente para a mais antiga com base na data
 Essa função retorna uma lista paginada de vagas do usuário, permitindo aplicar **filtros por empresa**, **tipo de contrato**, **status**, **intervalo de datas** e **busca textual** no título da vaga. O resultado é ordenado pela data de criação (`created_at`) da mais recente para a mais antiga.
 
 ---
+
+## 📘 Função: `save_job_description`
+
+- **Rota:** `POST /rest/v1/rpc/save_job_description`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/save_job_description`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_job_id": "uuid-da-vaga",
+  "p_descricao": "Esta vaga exige experiência com projetos ágeis, liderança técnica e arquitetura backend."
+}
+```
+| Campo         | Tipo   | Obrigatório | Descrição                                     |
+|---------------|--------|-------------|-----------------------------------------------|
+| `p_job_id`    | uuid   | Sim         | ID da vaga para a qual a descrição será salva |
+| `p_descricao` | text   | Sim         | Conteúdo da descrição da vaga                 |
+
+---
+
+### 📤 Exemplo de resposta (response)
+
+```json
+{
+  "status": "200 OK",
+  "message": "Descrição da vaga salva com sucesso!",
+  "description_id": "uuid-da-descricao"
+}
+```
+---
+
+### 💬 Descrição
+
+Essa função salva (ou registra) uma descrição de vaga na tabela `job_descriptions`.  
+Ela associa um texto descritivo a um `job_id` e retorna o `id` da nova descrição inserida.
+
+---
