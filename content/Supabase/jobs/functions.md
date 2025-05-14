@@ -249,3 +249,131 @@ Essa função retorna o conteúdo do campo `descricao` da tabela `job_descriptio
 Caso não exista descrição registrada para a vaga, a função ainda responde com status `200 OK`, porém com uma mensagem informativa.
 
 ---
+
+## 📘 Função: `get_jobs_by_step`
+
+- **Rota:** `POST /rest/v1/rpc/get_jobs_by_step`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/get_jobs_by_step`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_user_id": "uuid-do-usuario",
+  "p_step": "draft"
+}
+```
+| Campo       | Tipo   | Obrigatório | Descrição                                      |
+|-------------|--------|-------------|------------------------------------------------|
+| `p_user_id` | uuid   | Sim         | ID do usuário cujas vagas serão consultadas    |
+| `p_step`    | text   | Sim         | Etapa da vaga (ex: draft, published, archived) |
+
+---
+
+### 📤 Exemplo de resposta (response)
+
+#### ✅ Vagas encontradas:
+
+```json
+{
+  "status": "200 OK",
+  "message": "Vagas encontradas.",
+  "jobs": [
+    {
+      "id": "uuid-da-vaga-1",
+      "titulo_cargo": "Desenvolvedor Frontend",
+      "step": "draft",
+      ...
+    },
+    {
+      "id": "uuid-da-vaga-2",
+      "titulo_cargo": "Analista de Dados",
+      "step": "draft",
+      ...
+    }
+  ]
+}
+```
+#### ℹ️ Nenhuma vaga encontrada:
+
+```json
+{
+  "status": "200 OK",
+  "message": "Nenhuma vaga encontrada para esse usuário nessa etapa."
+}
+```
+---
+
+### 💬 Descrição
+
+Essa função retorna todas as vagas associadas a um determinado `user_id` que estejam em uma etapa específica (`p_step`), como por exemplo: `"draft"`, `"published"`, `"archived"`, etc.
+
+Os resultados são ordenados da mais recente para a mais antiga com base na data de criação (`created_at`).
+
+---
+
+## 📘 Função: `get_user_jobs`
+
+- **Rota:** `POST /rest/v1/rpc/get_user_jobs`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/get_user_jobs`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_user_id": "uuid-do-usuario",
+  "p_company_id": "uuid-da-empresa",
+  "p_contract": "CLT",
+  "p_status": "Rascunho",
+  "p_start_date": "2025-01-01T00:00:00",
+  "p_end_date": "2025-12-31T23:59:59",
+  "p_search": "Desenvolvedor",
+  "p_page": 1
+}
+```
+| Campo          | Tipo      | Obrigatório | Descrição                                                             |
+|----------------|-----------|-------------|-----------------------------------------------------------------------|
+| `p_user_id`    | uuid      | Sim         | ID do usuário proprietário das vagas                                  |
+| `p_company_id` | uuid      | Não         | ID da empresa (opcional — se fornecido, filtra vagas dessa empresa)   |
+| `p_contract`   | text      | Não         | Tipo de contrato (ex: "CLT", "PJ")                                     |
+| `p_status`     | text      | Não         | Status da vaga (ex: "Rascunho", "Publicada", etc.)                    |
+| `p_start_date` | timestamp | Não         | Data inicial para filtro por criação de vaga                           |
+| `p_end_date`   | timestamp | Não         | Data final para filtro por criação de vaga                             |
+| `p_search`     | text      | Não         | Termo de busca no título da vaga                                       |
+| `p_page`       | integer   | Sim         | Número da página para paginação (mínimo 1)                             |
+
+---
+
+### 📤 Exemplo de resposta (response)
+
+```json
+{
+  "data": [
+    {
+      "id": "uuid-da-vaga",
+      "titulo_cargo": "Desenvolvedor Backend",
+      "status": "Publicada",
+      ...
+    }
+  ],
+  "pageSize": 10,
+  "currentPage": 1,
+  "totalPages": 3,
+  "isLastPage": false
+}
+```
+---
+
+### 💬 Descrição
+
+Essa função retorna uma lista paginada de vagas do usuário, permitindo aplicar **filtros por empresa**, **tipo de contrato**, **status**, **intervalo de datas** e **busca textual** no título da vaga. O resultado é ordenado pela data de criação (`created_at`) da mais recente para a mais antiga.
+
+---
