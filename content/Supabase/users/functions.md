@@ -46,6 +46,9 @@ Nesta página estão documentadas as functions relacionadas à **Usuários **.
 Essa função retorna os dados completos de um usuário cadastrado, com base no seu user_id.
 É usada principalmente após o login, para carregar as informações do usuário logado no painel.
 
+***
+
+
 <p align="left"> <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/content/functions.md">⬅ Voltar para o índice de endpoints</a> </p> 
 
 <p align="left">
