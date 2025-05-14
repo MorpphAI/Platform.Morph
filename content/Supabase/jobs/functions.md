@@ -614,4 +614,9 @@ Além disso, um **log de atividade** é registrado na tabela `activity_logs`, de
 
 ---
 
-🔙 [Voltar para o índice de endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/functions.md)
+<p align="left"> <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/content/functions.md">⬅ Voltar para o índice de endpoints</a> </p> 
+
+<p align="left">
+  <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/README.md"> Ver login endpoints</a>
+</p>
+
