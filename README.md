@@ -33,7 +33,7 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
 ## Documentação 
 
 - [Arquitetura](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/Arquitetura.md)
-    - [Sobre API REST](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
+    - [Sobre API REST](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Arquitetura/introRestOpenIA.md)
     - [Como utlizamos o Supabase?](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
     - [Como utlizamos a API da OpenIA?](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
 - [Documentação Jornadas](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/DocsJornadas.md)
