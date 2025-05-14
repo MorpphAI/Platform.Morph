@@ -63,3 +63,81 @@ Essa função verifica se um usuário pode criar novas vagas com base no plano a
 4. Retorna um JSON com os dados relevantes.
 
 ---
+## 📘 Função: `create__job`
+
+- **Rota:** `POST /rest/v1/rpc/create__job`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/create__job`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_user_id": "uuid-do-usuario",
+  "p_titulo_cargo": "Desenvolvedor Backend",
+  "p_salario": 8000,
+  "p_beneficios": "Plano de saúde, Vale alimentação",
+  "p_regime_contratacao": "CLT",
+  "p_localizacao": "São Paulo - SP",
+  "p_observacoes": "Disponibilidade para início imediato",
+  "p_arquivos": null,
+  "p_escolaridade": "Superior completo",
+  "p_certificacoes": "AWS, Scrum",
+  "p_idiomas": "Inglês, Espanhol",
+  "p_experiencia_profissional": "3 anos como dev backend",
+  "p_horarios": "Segunda a Sexta, horário comercial",
+  "p_habilidades_tecnicas": "Node.js, PostgreSQL",
+  "p_habilidades_interpessoais": "Trabalho em equipe, Comunicação",
+  "p_company_id": "uuid-da-empresa"
+}
+```
+| Campo                         | Tipo     | Obrigatório | Descrição                                 |
+|------------------------------|----------|-------------|-------------------------------------------|
+| `p_user_id`                  | uuid     | Sim         | ID do usuário que está criando a vaga     |
+| `p_titulo_cargo`             | text     | Sim         | Título do cargo                           |
+| `p_salario`                  | numeric  | Sim         | Salário ofertado                          |
+| `p_beneficios`               | text     | Não         | Benefícios adicionais                     |
+| `p_regime_contratacao`       | text     | Sim         | Regime de contratação (CLT, PJ etc.)      |
+| `p_localizacao`              | text     | Sim         | Local da vaga                             |
+| `p_observacoes`              | text     | Não         | Observações adicionais                    |
+| `p_arquivos`                 | text     | Não         | Arquivos relacionados (links, uploads)    |
+| `p_escolaridade`             | text     | Não         | Nível de escolaridade exigido             |
+| `p_certificacoes`            | text     | Não         | Certificações desejadas                   |
+| `p_idiomas`                  | text     | Não         | Idiomas desejados                         |
+| `p_experiencia_profissional` | text     | Não         | Experiência necessária                    |
+| `p_horarios`                 | text     | Não         | Horário de trabalho                       |
+| `p_habilidades_tecnicas`     | text     | Não         | Habilidades técnicas exigidas             |
+| `p_habilidades_interpessoais`| text     | Não         | Soft skills esperadas                     |
+| `p_company_id`               | uuid     | Sim         | ID da empresa associada                   |
+
+---
+
+### 📤 Exemplo de resposta (response)
+
+```json
+{
+  "status": "200 OK",
+  "message": "Vaga criada com sucesso!",
+  "job_id": "b5989f4e-e0b7-4cd4-a43d-77b1ff934d6c",
+  "job_name": "Desenvolvedor Backend"
+}
+```
+---
+
+### 💬 Descrição
+
+Essa função insere uma nova vaga na tabela `jobs`, com base nas informações fornecidas pelo usuário autenticado. Após a criação da vaga, também registra automaticamente um log da atividade na tabela `activity_logs`, com o tipo de atividade `"Vaga Criada"`.
+
+---
+
+### 🔁 Lógica Interna
+
+1. Insere uma nova vaga na tabela `jobs`.
+2. Captura o `id` e `titulo_cargo` da vaga recém-criada.
+3. Insere um registro de log em `activity_logs` informando a criação.
+4. Retorna um JSON com o status da operação, `job_id` e `job_name`.
+
+---
