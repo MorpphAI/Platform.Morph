@@ -199,3 +199,53 @@ Essa função busca uma vaga específica a partir do seu `job_id`, unindo os dad
 Se a vaga não for encontrada, retorna um erro 404 com mensagem personalizada.
 
 ---
+
+## 📘 Função: `get_job_description`
+
+- **Rota:** `POST /rest/v1/rpc/get_job_description`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/get_job_description`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_job_id": "uuid-da-vaga"
+}
+```
+| Campo       | Tipo   | Obrigatório | Descrição                   |
+|-------------|--------|-------------|-----------------------------|
+| `p_job_id`  | uuid   | Sim         | ID da vaga que será buscada |
+
+---
+
+### 📤 Exemplo de resposta (response)
+
+#### ✅ Descrição encontrada:
+
+```json
+{
+  "status": "200 OK",
+  "message": "Descrição encontrada.",
+  "descricao": "Esta vaga é para atuação com projetos internacionais..."
+}
+```
+#### ℹ️ Nenhuma descrição encontrada:
+
+```json
+{
+  "status": "200 OK",
+  "message": "Nenhuma descrição encontrada para esta vaga."
+}
+```
+---
+
+### 💬 Descrição
+
+Essa função retorna o conteúdo do campo `descricao` da tabela `job_descriptions` referente ao `job_id` informado.  
+Caso não exista descrição registrada para a vaga, a função ainda responde com status `200 OK`, porém com uma mensagem informativa.
+
+---
