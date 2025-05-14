@@ -41,8 +41,8 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
     - [Criação de vaga](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
     - [Criação de persona](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
 - [Supabase](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/Supabase.md)
-  - [Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
-    - [Autenticação](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/autenticacao.md)
+  - [Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/Endpoints.md)
+    - [Users Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/autenticacao.md)
 
 
 ## Fontes de conteúdo
