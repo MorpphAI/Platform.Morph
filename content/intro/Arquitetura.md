@@ -57,20 +57,6 @@ Os dados capturados e processados pela plataforma são organizados em painéis c
 
 ---
 
-## 💡 Visão Geral da Arquitetura
-
-```mermaid
-graph TD;
-    UI[Frontend - Bubble] --> Connector[API Connector]
-    Connector --> OpenAI[OpenAI API]
-    Connector --> Supabase
-    Supabase --> DB[(Postgres DB)]
-    Supabase --> Auth[Auth + SMTP]
-    Supabase --> Functions[Functions 🔗]
-    Supabase --> Looker[Looker Studio]
-
----
-
 <p align="right">
   <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/DocsJornadas.md">Próximo -> Documentação jornada</a>
 </p>
