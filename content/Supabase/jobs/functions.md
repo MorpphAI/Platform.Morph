@@ -141,3 +141,61 @@ Essa função insere uma nova vaga na tabela `jobs`, com base nas informações 
 4. Retorna um JSON com o status da operação, `job_id` e `job_name`.
 
 ---
+
+## 📘 Função: `get_job_by_id`
+
+- **Rota:** `POST /rest/v1/rpc/get_job_by_id`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/get_job_by_id`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_job_id": "uuid-da-vaga"
+}
+```
+| Campo       | Tipo   | Obrigatório | Descrição                     |
+|-------------|--------|-------------|-------------------------------|
+| `p_job_id`  | uuid   | Sim         | ID da vaga a ser consultada   |
+
+---
+
+### 📤 Exemplo de resposta (response)
+
+#### ✅ Vaga encontrada:
+
+```json
+{
+  "status": "200 OK",
+  "message": "Vaga encontrada.",
+  "job": {
+    "id": "uuid-da-vaga",
+    "user_id": "uuid-do-usuario",
+    "titulo_cargo": "Analista de Dados",
+    "salario": 7000,
+    "beneficios": "VR, VT",
+    ...
+    "descricao": "Responsável por análises de BI e relatórios estratégicos"
+  }
+}
+```
+#### ❌ Vaga não encontrada:
+
+```json
+{
+  "status": "404 NOT FOUND",
+  "message": "Vaga não encontrada com o ID fornecido."
+}
+```
+---
+
+### 💬 Descrição
+
+Essa função busca uma vaga específica a partir do seu `job_id`, unindo os dados da tabela `jobs` com o campo `descricao` da tabela `job_descriptions`.  
+Se a vaga não for encontrada, retorna um erro 404 com mensagem personalizada.
+
+---
