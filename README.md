@@ -42,7 +42,7 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
     - [Criação de persona](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
 - [Supabase](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/Supabase.md)
   - [Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/Endpoints.md)
-    - [Users Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/autenticacao.md)
+    - [Users Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/users/functions.md)
       - [Login Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/users/Onboarding/Login/functions.md)
       - [Cadastro Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/users/Onboarding/cadastro/Endpoints.md)
       - [Redefinir senha Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/users/Onboarding/Redefinir%20senha/functions.md)
