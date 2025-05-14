@@ -577,12 +577,12 @@ Além da atualização, a função também registra **dois logs na tabela `activ
   "p_job_id": "uuid-da-vaga",
   "p_descricao": "Atualização completa da descrição da vaga com novos requisitos."
 }
-
+```
 | Campo         | Tipo   | Obrigatório | Descrição                                       |
 |---------------|--------|-------------|-------------------------------------------------|
 | `p_job_id`    | uuid   | Sim         | ID da vaga cuja descrição será atualizada      |
 | `p_descricao` | text   | Sim         | Nova descrição da vaga                         |
-```
+
 ---
 
 ### 📤 Exemplo de resposta (response)
