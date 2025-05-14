@@ -25,7 +25,7 @@ O **[Supabase](https://supabase.com)** é o núcleo da nossa aplicação – res
 - **Autenticação**: gerenciamento de usuários via e-mail (login, reset de senha, confirmação, etc).
 - **Functions**: usamos funções SQL/PLPGSQL para executar lógicas personalizadas da plataforma.
 
-🔗 **Veja todas as functions que utilizamos**: [Funções cadastradas no Supabase](https://github.com/MorpphAI/Platform.Morph/blob/main/content/infra/functions.md)
+🔗 **Veja todas as functions que utilizamos**: [Funções cadastradas no Supabase](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/Endpoints.md)
 
 ---
 
