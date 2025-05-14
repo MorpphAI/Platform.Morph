@@ -419,3 +419,145 @@ Essa função salva (ou registra) uma descrição de vaga na tabela `job_descrip
 Ela associa um texto descritivo a um `job_id` e retorna o `id` da nova descrição inserida.
 
 ---
+
+## 📘 Função: `update_description_job`
+
+- **Rota:** `POST /rest/v1/rpc/update_description_job`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/update_description_job`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_job_id": "uuid-da-vaga",
+  "p_description": "Atualização da descrição com requisitos mais recentes da vaga."
+}
+```
+
+| Campo           | Tipo   | Obrigatório | Descrição                                        |
+|-----------------|--------|-------------|--------------------------------------------------|
+| `p_job_id`      | uuid   | Sim         | ID da vaga cuja descrição será atualizada       |
+| `p_description` | text   | Sim         | Novo conteúdo da descrição da vaga              |
+
+---
+
+### 📤 Exemplo de resposta (response)
+
+#### ✅ Atualização bem-sucedida:
+
+```json
+{
+  "status": "200 OK",
+  "message": "Descrição da vaga atualizada com sucesso."
+}
+```
+
+#### ❌ Nenhuma descrição encontrada:
+
+```json
+{
+  "status": "404 Not Found",
+  "message": "Nenhuma descrição encontrada para atualizar."
+}
+```
+---
+
+### 💬 Descrição
+
+Essa função atualiza a descrição de uma vaga, caso ela já exista na tabela `job_descriptions`.  
+Se não houver descrição registrada previamente para o `job_id` informado, a função retorna uma mensagem de erro `404`.
+
+---
+
+## 📘 Função: `update_job`
+
+- **Rota:** `POST /rest/v1/rpc/update_job`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/update_job`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_job_id": "uuid-da-vaga",
+  "p_idiomas": "Inglês, Espanhol",
+  "p_salario": 8000,
+  "p_arquivos": null,
+  "p_horarios": "Horário comercial",
+  "p_beneficios": "VR, VT",
+  "p_localizacao": "São Paulo",
+  "p_observacoes": "Preferência para início imediato",
+  "p_escolaridade": "Superior completo",
+  "p_titulo_cargo": "Dev Backend",
+  "p_certificacoes": "Scrum, AWS",
+  "p_regime_contratacao": "CLT",
+  "p_habilidades_tecnicas": "Node.js, PostgreSQL",
+  "p_experiencia_profissional": "3 anos de experiência",
+  "p_habilidades_interpessoais": "Trabalho em equipe",
+  "p_status": "Publicada",
+  "p_step": "final",
+  "p_company_id": "uuid-da-empresa"
+}
+```
+| Campo                        | Tipo     | Obrigatório | Descrição                                         |
+|-----------------------------|----------|-------------|---------------------------------------------------|
+| `p_job_id`                  | uuid     | Sim         | ID da vaga a ser atualizada                       |
+| `p_titulo_cargo`            | text     | Não         | Novo título do cargo                              |
+| `p_salario`                 | numeric  | Não         | Novo salário                                      |
+| `p_beneficios`              | text     | Não         | Benefícios atualizados                            |
+| `p_regime_contratacao`      | text     | Não         | Tipo de contrato                                  |
+| `p_localizacao`             | text     | Não         | Local da vaga                                     |
+| `p_observacoes`             | text     | Não         | Observações adicionais                            |
+| `p_arquivos`                | text     | Não         | Arquivos relacionados                             |
+| `p_escolaridade`            | text     | Não         | Escolaridade mínima exigida                       |
+| `p_certificacoes`           | text     | Não         | Certificações desejadas                           |
+| `p_idiomas`                 | text     | Não         | Idiomas desejados                                 |
+| `p_experiencia_profissional`| text     | Não         | Experiência necessária                            |
+| `p_horarios`                | text     | Não         | Horário de trabalho                               |
+| `p_habilidades_tecnicas`    | text     | Não         | Habilidades técnicas exigidas                     |
+| `p_habilidades_interpessoais`| text    | Não         | Soft skills desejadas                             |
+| `p_status`                  | text     | Não         | Novo status da vaga                               |
+| `p_step`                    | text     | Não         | Etapa da vaga no funil                            |
+| `p_company_id`              | uuid     | Não         | ID da empresa associada                           |
+
+---
+
+### 📤 Exemplo de resposta (response)
+
+```json
+{
+  "status": "200 OK",
+  "message": "Vaga atualizada com sucesso!",
+  "job_id": "uuid-da-vaga"
+}
+```
+
+#### ❌ Caso a vaga não seja encontrada:
+
+```json
+{
+  "status": "400 Bad Request",
+  "message": "Vaga não encontrada ou erro na atualização."
+}
+
+```
+
+---
+
+### 💬 Descrição
+
+Essa função atualiza os campos de uma vaga existente na tabela `jobs`. Ela utiliza `COALESCE` para manter os valores antigos caso não sejam enviados novos valores.  
+Além da atualização, a função também registra **dois logs na tabela `activity_logs`**:
+
+- Um log de atualização geral da vaga (`Vaga Atualizada`).
+- Um log específico se o campo `status` for alterado (`Status da Vaga Atualizado`).
+
+---
+
