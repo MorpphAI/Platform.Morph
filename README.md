@@ -47,6 +47,8 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
       - [Cadastro Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/users/Onboarding/cadastro/Endpoints.md)
       - [Redefinir senha Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/users/Onboarding/Redefinir%20senha/functions.md)
     - [Jobs Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/jobs/functions.md)
+      - [Jobs Description Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/jobs/functions.md)
+      - [Jobs Persona Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/jobs/functions.md)
     - [Companies Endpoints](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/client_companies/functions.md)
 
 ## Fontes de conteúdo
