@@ -37,7 +37,7 @@ Bem-vindo à documentação oficial da Morph IA, uma plataforma inovadora voltad
     - [Como utlizamos o Supabase?](https://github.com/MorpphAI/platform.Morph/blob/main/content/intro/rest.md)
     - [Como utlizamos a API da OpenIA?](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Arquitetura/rest.md)
 - [Documentação Jornadas](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/DocsJornadas.md)
-    - [Login](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
+    - [Login](https://github.com/MorpphAI/Platform.Morph/blob/main/content/Jornadas/jornadaLogin.md)
     - [Criação de vaga](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
     - [Criação de persona](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/jornadaLogin.md)
 - [Supabase](https://github.com/MorpphAI/Platform.Morph/blob/main/content/intro/Supabase.md)
