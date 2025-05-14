@@ -561,3 +561,55 @@ Além da atualização, a função também registra **dois logs na tabela `activ
 
 ---
 
+## 📘 Função: `update_job_description`
+
+- **Rota:** `POST /rest/v1/rpc/update_job_description`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/update_job_description`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_job_id": "uuid-da-vaga",
+  "p_descricao": "Atualização completa da descrição da vaga com novos requisitos."
+}
+
+| Campo         | Tipo   | Obrigatório | Descrição                                       |
+|---------------|--------|-------------|-------------------------------------------------|
+| `p_job_id`    | uuid   | Sim         | ID da vaga cuja descrição será atualizada      |
+| `p_descricao` | text   | Sim         | Nova descrição da vaga                         |
+```
+---
+
+### 📤 Exemplo de resposta (response)
+
+#### ✅ Descrição atualizada com sucesso:
+
+```json
+{
+  "status": "200 OK",
+  "message": "Descrição da vaga atualizada com sucesso!",
+  "job_id": "uuid-da-vaga"
+}
+```
+#### ❌ Descrição não encontrada para o job_id informado:
+
+```json
+{
+  "status": "404 Not Found",
+  "message": "Nenhuma descrição encontrada para esta vaga."
+}
+```
+---
+
+### 💬 Descrição
+
+Essa função atualiza a descrição de uma vaga existente na tabela `job_descriptions`.  
+Se o `job_id` não possuir uma descrição cadastrada, a função retorna um erro 404.  
+Além disso, um **log de atividade** é registrado na tabela `activity_logs`, detalhando a alteração feita.
+
+---
