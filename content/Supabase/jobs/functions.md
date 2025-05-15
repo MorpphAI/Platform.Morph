@@ -548,6 +548,68 @@ Se o `job_id` não possuir uma descrição cadastrada, a função retorna um err
 Além disso, um **log de atividade** é registrado na tabela `activity_logs`, detalhando a alteração feita.
 
 ---
+## 📘 Função: `update_datas_job`
+
+- **Rota:** `POST /rest/v1/rpc/update_datas_job`  
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/update_datas_job`  
+- **Tipo de requisição:** `POST`  
+- **Autenticação:** ✅ (Requer token JWT de usuário autenticado)
+
+---
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_job_id": "0fbf1a2e-cc9e-49e5-9c1b-0f71d74d5df7",
+  "p_data_abertura": "2025-05-15T12:00:00Z",
+  "p_data_fechamento": "2025-06-15T12:00:00Z"
+}
+```
+| Campo               | Tipo      | Obrigatório | Descrição                                                                 |
+|---------------------|-----------|-------------|---------------------------------------------------------------------------|
+| `p_job_id`          | string    | Sim         | UUID da vaga a ser atualizada                                            |
+| `p_data_abertura`   | timestamp | Não         | Nova data de abertura da vaga (mantém valor atual se não enviado)       |
+| `p_data_fechamento` | timestamp | Não         | Nova data de fechamento da vaga (mantém valor atual se não enviado)     |
+
+---
+
+### 📤 Exemplo de resposta (response)
+
+#### ✅ Caso a atualização seja bem-sucedida:
+
+```json
+{
+  "status": "200 OK",
+  "message": "Datas da vaga atualizadas com sucesso!",
+  "job_id": "0fbf1a2e-cc9e-49e5-9c1b-0f71d74d5df7"
+}
+```
+#### ❌ Caso a vaga não exista ou ocorra falha na atualização:
+
+```json
+{
+  "status": "400 Bad Request",
+  "message": "Vaga não encontrada ou erro na atualização de datas."
+}
+```
+#### ❌ Caso o limite de vagas do usuário tenha sido atingido (verificação com `check_user_job_limit`):
+
+```json
+{
+  "status": "403 Forbidden",
+  "message": "Limite de vagas atingido para o plano do usuário."
+}
+```
+---
+
+### 💬 Descrição
+
+A função `update_datas_job` atualiza os campos `data_abertura` e/ou `data_fechamento` de uma vaga existente. Ela também:
+
+- Verifica o plano do usuário responsável pela vaga usando a função `check_user_job_limit`.
+- Registra logs de alteração de datas na tabela `activity_logs`, se houver mudanças.
+- Garante que, caso nenhuma vaga seja encontrada com o `p_job_id`, uma mensagem de erro apropriada seja retornada.
 
 <p align="left"> <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/content/functions.md">⬅ Voltar para o índice de endpoints</a> </p> 
 
