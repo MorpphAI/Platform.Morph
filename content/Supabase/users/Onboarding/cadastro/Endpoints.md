@@ -13,13 +13,12 @@
   "email": "geyiga9833@hikuhu.com",
   "password": "adilson1234"
 }
-
+```
 | Campo      | Tipo   | Obrigatório | Descrição                            |
 | ---------- | ------ | ----------- | ------------------------------------ |
 | `email`    | string | Sim         | E-mail do usuário a ser cadastrado   |
 | `password` | string | Sim         | Senha do usuário (mín. 6 caracteres) |
 
-```
 
 ### 📤 Exemplo de resposta (response)
 ```json
