@@ -145,7 +145,6 @@ Metadados adicionais do usuário autenticado
   "message": "Plano inválido para este usuário."
 }
 ```
----
 
 ### 💬 Descrição
 
@@ -155,7 +154,7 @@ Essa função verifica se um usuário pode criar novas vagas com base no plano a
 - **Plano `paying`**: criação ilimitada de vagas.
 - Caso o plano do usuário esteja indefinido ou incorreto, uma mensagem de erro é retornada.
 
----
+
 
 ### 🔁 Lógica Interna
 
@@ -165,6 +164,45 @@ Essa função verifica se um usuário pode criar novas vagas com base no plano a
    - `free`: é permitido criar até 25 vagas.
    - `paying`: criação ilimitada.
 4. Retorna um JSON com os dados relevantes.
+
+---
+
+---
+
+## 📘 Função: `set_user_thread_id`
+
+- **Rota:** `POST /rest/v1/rpc/set_user_thread_id`
+- **URL completa:** `https://xwbdvaqggcdfgsqnxico.supabase.co/rest/v1/rpc/set_user_thread_id`
+- **Tipo de requisição:** `POST`
+- **Autenticação:** ✅ (Requer token JWT válido)
+
+### 📝 Parâmetros esperados (request)
+
+```json
+{
+  "p_user_id": "ad8df596-6d25-4a8f-a958-8eb45ad3b2b9",
+  "p_thread_id": "thread_ch9lZkEI8ihjWuJyU4TbXpmh"
+}
+
+| Campo         | Tipo   | Obrigatório | Descrição                               |
+| ------------- | ------ | ----------- | --------------------------------------- |
+| `p_user_id`   | string | Sim         | UUID do usuário a ser atualizado        |
+| `p_thread_id` | string | Sim         | ID da thread a ser vinculada ao usuário |
+
+```
+
+### 📤 Exemplo de resposta (response)
+
+```json
+{
+  "status": "200 OK"
+}
+```
+
+### 💬 Descrição
+
+Essa função atualiza o campo thread_id de um usuário no banco de dados.
+É utilizada, por exemplo, quando uma nova conversa é criada para um agente e precisa ser vinculada ao perfil do usuário.
 
 <p align="left"> <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/content/functions.md">⬅ Voltar para o índice de endpoints</a> </p> 
 
