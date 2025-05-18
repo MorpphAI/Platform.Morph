@@ -98,3 +98,9 @@ Esse endpoint é utilizado para criar o perfil de um usuário na tabela users lo
 A ligação entre as duas tabelas é feita pelo campo id, que deve ser o mesmo do Supabase Auth (auth.users.id = users.id), garantindo consistência e permitindo recuperar dados adicionais posteriormente.
 
 É um passo essencial no processo de onboarding da Morph IA.
+
+<p align="left"> <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/content/functions.md">⬅ Voltar para o índice de endpoints</a> </p> 
+
+<p align="left">
+  <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/users/Onboarding/Login/functions.md"> Ver login endpoints</a>
+</p>
