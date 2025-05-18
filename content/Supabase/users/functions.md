@@ -167,8 +167,6 @@ Essa função verifica se um usuário pode criar novas vagas com base no plano a
 
 ---
 
----
-
 ## 📘 Função: `set_user_thread_id`
 
 - **Rota:** `POST /rest/v1/rpc/set_user_thread_id`
