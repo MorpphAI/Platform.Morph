@@ -181,13 +181,12 @@ Essa função verifica se um usuário pode criar novas vagas com base no plano a
   "p_user_id": "ad8df596-6d25-4a8f-a958-8eb45ad3b2b9",
   "p_thread_id": "thread_ch9lZkEI8ihjWuJyU4TbXpmh"
 }
-
+```
 | Campo         | Tipo   | Obrigatório | Descrição                               |
 | ------------- | ------ | ----------- | --------------------------------------- |
 | `p_user_id`   | string | Sim         | UUID do usuário a ser atualizado        |
 | `p_thread_id` | string | Sim         | ID da thread a ser vinculada ao usuário |
 
-```
 
 ### 📤 Exemplo de resposta (response)
 
