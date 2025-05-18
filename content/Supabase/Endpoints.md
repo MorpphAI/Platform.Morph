@@ -50,5 +50,5 @@ Para manter o padrão da documentação, **toda nova function precisa ser acompa
 </p>
 
 <p align="left">
-  <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/README.md"> ver functionsd e users</a>
+  <a href="https://github.com/MorpphAI/Platform.Morph/blob/main/content/Supabase/users/functions.md"> ver users endpoints </a>
 </p>
